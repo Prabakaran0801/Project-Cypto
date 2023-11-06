@@ -22,19 +22,23 @@ const Navbar = () => {
 
         </Button> */}
       </div>
-      <Menu theme="dark">
-        <Menu.Item icon={<HomeOutlined />}>
+      <Menu theme="dark" selectedKeys={[]}>
+        <Menu.Item icon={<HomeOutlined />} key="home">
           <Link to="/">Home</Link>
         </Menu.Item>
-        <Menu.Item icon={<FundOutlined />}>
+        <Menu.Divider />
+        <Menu.Item icon={<FundOutlined />} key="currencies">
           <Link to="/cryptocurrencies">Currencies</Link>
         </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
+        <Menu.Divider />
+        <Menu.Item icon={<MoneyCollectOutlined />} key="exchanges">
           <Link to="/exchanges">Exchanges</Link>
         </Menu.Item>
-        <Menu.Item icon={<BulbOutlined />}>
+        <Menu.Divider />
+        <Menu.Item icon={<BulbOutlined />} key="news">
           <Link to="/news">News</Link>
         </Menu.Item>
+        <Menu.Divider />
       </Menu>
     </div>
   );
