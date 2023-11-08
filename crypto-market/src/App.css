@@ -203,10 +203,13 @@ a:hover {
 }
 
 .coin-desc-link {
-  display: flex;
+  /* display: flex; */
   gap: 40px;
   margin-top: 40px;
   padding-top: 20px;
+}
+.coin-desc-p {
+  margin-bottom: 50px;
 }
 
 .coin-desc-link h2 {
