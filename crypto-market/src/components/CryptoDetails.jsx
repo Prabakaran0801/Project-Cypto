@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HTMLReactParser from "html-react-parser";
 import { useParams } from "react-router-dom";
 import millify from "millify";
-import { Col, Row, Select, Typography } from "antd";
+import { Col, Row, Select, Typography, Spin } from "antd";
 import {
   MoneyCollectOutlined,
   DollarCircleOutlined,
@@ -36,7 +36,7 @@ const CryptoDetails = () => {
 
   const cryptoDetails = data?.data?.coin;
 
-  if (isFetching || loading) return "Loading...";
+  if (isFetching || loading) return <Spin size="large" />;
 
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
@@ -124,7 +124,7 @@ const CryptoDetails = () => {
         </p>
       </Col>
       <Select
-        defaultValue="7d"
+        defaultValue="24h"
         className="select-timeperiod"
         placeholder="Select Time Period"
         onChange={(value) => setTimePeriod(value)}
